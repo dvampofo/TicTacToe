@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="eecs1022.lab6.Lab6Activity">
+
+    <TextView
+        android:id="@+id/labelPlayerX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="51dp"
+        android:text="Name of Player X:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputPlayerX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelPlayerX"
+        android:layout_alignBottom="@+id/labelPlayerX"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/labelPlayerX"
+        android:layout_toRightOf="@+id/labelPlayerX"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/labelPlayerO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/inputPlayerX"
+        android:layout_marginTop="37dp"
+        android:text="Name of Player O:" />
+
+    <EditText
+        android:id="@+id/inputPlayerO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelPlayerO"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/labelPlayerO"
+        android:layout_toRightOf="@+id/labelPlayerO"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/labelChoosePlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelPlayerO"
+        android:layout_marginTop="56dp"
+        android:text="Who plays first?" />
+
+    <Spinner
+        android:id="@+id/spinnerPlayers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelChoosePlayer"
+        android:layout_toEndOf="@+id/labelChoosePlayer"
+        android:layout_toRightOf="@+id/labelChoosePlayer"
+        android:entries="@array/firstMover"/>
+
+    <Button
+        android:id="@+id/buttonStartRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelChoosePlayer"
+        android:layout_marginTop="47dp"
+        android:onClick="buttonStartRestart"
+        android:text="Start/Restart a game" />
+
+    <TextView
+        android:id="@+id/labelRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/buttonStartRestart"
+        android:layout_marginTop="59dp"
+        android:text="Choose a row number:" />
+
+    <Spinner
+        android:id="@+id/spinnerRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/labelRow"
+        android:layout_toEndOf="@+id/labelRow"
+        android:layout_toRightOf="@+id/labelRow"
+        android:entries="@array/row"/>
+
+    <TextView
+        android:id="@+id/labelColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinnerRow"
+        android:layout_marginTop="30dp"
+        android:text="Choose a column number:" />
+
+    <Spinner
+        android:id="@+id/spinnerColumn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelColumn"
+        android:layout_toEndOf="@+id/labelColumn"
+        android:layout_toRightOf="@+id/labelColumn"
+        android:entries="@array/column"/>
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/labelColumn"
+        android:layout_marginTop="58dp"
+        android:onClick="buttonPlay"
+        android:text="Play" />
+
+    <TextView
+        android:id="@+id/labelBoard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/buttonPlay"
+        android:layout_marginTop="54dp"
+        android:textAlignment="center" />
+
+</android.widget.RelativeLayout>

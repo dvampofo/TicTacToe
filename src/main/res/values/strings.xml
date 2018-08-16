@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">EECS1022 W18 Lab 6: Tic-Tac-Toe Game</string>
+
+
+    <string-array name="firstMover">
+        <item>Player X</item>
+        <item>Player O</item>
+    </string-array>
+
+    <string-array name="row">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="column">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+</resources>
